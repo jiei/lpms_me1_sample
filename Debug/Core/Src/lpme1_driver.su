@@ -1,0 +1,4 @@
+lpme1_driver.c:26:16:lpme1_read_reg	32	static
+lpme1_driver.c:54:16:lpme1_write_reg	32	static
+lpme1_driver.c:82:16:lpme1_read_buffer	32	static
+lpme1_driver.c:114:16:lpme1_write_buffer	32	static
