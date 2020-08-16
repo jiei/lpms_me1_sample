@@ -127,8 +127,6 @@ int main(void)
 	lpme1_get_mag(lpme1Data.mag);
 	lpme1_get_euler(lpme1Data.euler);
 	lpme1_get_quat(lpme1Data.quat);
-	lpme1_get_linacc(lpme1Data.linAcc);
-	lpme1_get_temp(&lpme1Data.temp);
 
 	/*
 	 * Caution!
@@ -138,12 +136,11 @@ int main(void)
 	 */
 
 	printf("Timestamp: %.3f \r\n",lpme1Data.time);
-	printf("AccX: %.3f\tAccY: %.3f\tAccZ: %.3f\t \r\n",lpme1Data.acc[0],lpme1Data.acc[1],lpme1Data.acc[2]);
-	printf("GyrX: %.3f\tGyrY: %.3f\tGyrZ: %.3f\t \r\n",lpme1Data.gyr[0],lpme1Data.gyr[1],lpme1Data.gyr[2]);
-	printf("MagX: %.3f\tMagY: %.3f\tMagZ: %.3f\t \r\n",lpme1Data.mag[0],lpme1Data.mag[1],lpme1Data.mag[2]);
-	printf("EulerX: %f\tEulerY: %f\tEulerZ: %f\t \r\n",lpme1Data.euler[0],lpme1Data.euler[1],lpme1Data.euler[2]);
-	printf("QuatW: %f\tQuatX: %f\tQuatY: %f\tQuatZ: %f\t  \r\n",lpme1Data.quat[0],lpme1Data.quat[1],lpme1Data.quat[2],lpme1Data.quat[3]);
-	printf("Temperature: %.1f \r\n",lpme1Data.temp);
+	printf("Acc[G]\tX: %.3f\tY: %.3f\tZ: %.3f\t \r\n",lpme1Data.acc[0],lpme1Data.acc[1],lpme1Data.acc[2]);
+	printf("Gyr[rad/s]\tX: %.3f\tY: %.3f\tZ: %.3f\t \r\n",lpme1Data.gyr[0],lpme1Data.gyr[1],lpme1Data.gyr[2]);
+	printf("Mag[?]\tX: %.3f\tY: %.3f\tZ: %.3f\t \r\n",lpme1Data.mag[0],lpme1Data.mag[1],lpme1Data.mag[2]);
+	printf("Euler[rad]\tX: %f\tY: %f\tZ: %f\t \r\n",lpme1Data.euler[0],lpme1Data.euler[1],lpme1Data.euler[2]);
+	printf("Quat:\tW: %f\tX: %f\tY: %f\tZ: %f\t  \r\n",lpme1Data.quat[0],lpme1Data.quat[1],lpme1Data.quat[2],lpme1Data.quat[3]);
 	printf("\r\n");
 	HAL_Delay(1000);
   }
